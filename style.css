@@ -1,0 +1,187 @@
+/* 🔥 Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🌙 Fondo general */
+body {
+  background: #0f0f1a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* 🔝 Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00f7ff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00f7ff;
+}
+
+/* 🚀 Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/* 🔥 Botón */
+.btn {
+  background: linear-gradient(270deg, #00f7ff, #7873f5);
+  background-size: 400% 400%;
+  padding: 12px 25px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+/* 📦 Secciones */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #00f7ff;
+}
+
+/* 👤 About */
+.about p {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* 🧠 Skills */
+.skills ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skills li {
+  background: rgba(255,255,255,0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.skills li:hover {
+  background: #00f7ff;
+  color: #000;
+}
+
+/* 💼 Proyectos */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #00f7ff;
+}
+
+/* 📩 Contacto */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.contact button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #00f7ff;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+/* 🔚 Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  margin-top: 40px;
+}
