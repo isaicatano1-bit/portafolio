@@ -185,3 +185,16 @@ footer {
   background: #000;
   margin-top: 40px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+  
