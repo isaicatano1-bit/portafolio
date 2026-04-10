@@ -7,16 +7,31 @@
     <link rel="stylesheet" href="style.css">
     <a href="index.html"></a>
 </head>
-<body>
+<body id="body">
     <header>
-    <nav class="navbar">
-      <h1 class="logo">Pets</h1> 
-      <ul class="nav-links">
+    <nav class="navbar" id="menu">
+      <h1 class="logo" id="logo">Mascotas</h1> 
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html#about">Sobre mí</a></li>
         <li><a href="index.html#skills">Skills</a></li>
         <li><a href="index.html#projects">Proyectos</a></li>
         <li><a href="index.html#contact">Contacto</a></li>
+      </ul>
+      
     </header>        
-    
+    <section>
+        <div class="contenedor">
+  <input type="checkbox" id="toggle-mascota" class="trigger">
+  
+  <label for="toggle-mascota" class="mascota-card">
+    <img src="mollys.png" alt="MOLLY">
+    <div class="info">
+      <h3>molly</h3>
+      <p>Es muy juguetona y le gusta el parque.</p>
+    </div>
+  </label>
+</div>
+
+    </section>
 </body>
 </html>
