@@ -22,8 +22,8 @@ body {
   position: sticky;
   top: 0;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
-  z-index: 1000000;
+
+  
 }
 
 .logo {
@@ -203,11 +203,12 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   background: rgba(89, 77, 102, 0.6);
   backdrop-filter: blur(10px);
-  
+  z-index: 1000;
 }
 
 #body{
@@ -278,28 +279,28 @@ header{
     color: #2c3e50;        /* Color oscuro para que se lea bien */
     text-align: center;
     transition: all 0.5s ease-in-out; /* Animación suave */
-    padding: 0 15px;       /* Sin padding vertical mientras está cerrado */
+    padding: 0 15px;      
 }
 
 .info h3 {
     margin: 10px 0 5px 0;
-    color: #d67e31;        /* Color naranja para el nombre */
+    color: #d67e31;        
     font-size: 1.5rem;
 }
 
 .info p {
     margin-bottom: 15px;
     font-size: 1rem;
-    line-height: 1.4;      /* Mejora la lectura */
+    line-height: 1.4;      
 }
 
-/* LOGICA PARA MOSTRAR: Cuando haces click */
+
 .trigger:checked + .mascota-card .info {
-    max-height: 300px;     /* Suficiente espacio para el texto largo */
-    padding: 10px 15px;    /* Aparece el espacio interno */
+    max-height: 300px;     
+    padding: 10px 15px;    
 }
 
-/* Efecto visual en la imagen al abrir */
+
 .trigger:checked + .mascota-card img {
     filter: grayscale(50%); 
 }
@@ -322,6 +323,6 @@ img {
     padding: 20px;
     margin-top: 50px;    
     position: relative;
-    z-index: 1;
+    z-index: -1;
 }
 
