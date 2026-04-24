@@ -108,23 +108,35 @@ h2 {
 
 /* Skills */
 .skills ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    padding: 20px;
 }
 
+
+.skills img {
+    width: 80px;      
+    height: 80px;     
+    object-fit: contain; 
+    transition: transform 0.3s ease;
+}
+
+/* Efecto bacano cuando pasas el mouse */
+.skills img:hover {
+    transform: scale(1.2);
+}
+
+/* Si tienes los nombres debajo (como en la foto) */
 .skills li {
-  background: rgba(255,255,255,0.1);
-  padding: 10px 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.skills li:hover {
-  background: #00f7ff;
-  color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: #fff; /* O el color que prefieras */
 }
 
 /* Proyectos */
@@ -240,6 +252,7 @@ header{
   flex-wrap: wrap;
   gap: 40px;
   padding: 50px 20px;
+
 }
 
 /* CARD */
@@ -283,14 +296,114 @@ header{
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
-  .mascotas-container {
-    flex-direction: column;
-  }
 
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-  }
+.menu-toggle {
+  display: none; 
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 100;
 }
 
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333; 
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.mascotas-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* --- 2. Media Query Única para Celulares  --- */
+@media (max-width: 768px) {
+  
+  /* Ajuste de Headers */
+  .navbar, .navbar_mascota {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  /* Mostrar Hamburguesa */
+  .menu-toggle {
+    display: flex; 
+  }
+
+  /* ESCONDER MENÚ  */
+  .nav-links, 
+  #nav-list-mascotas {
+    display: none; /* Esto soluciona que no se escondan */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%; /* Aparece justo debajo del header */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para que se vea el texto */
+    text-align: center;
+    z-index: 10;
+  }
+
+  /* Mostrar al activar con JS */
+  .nav-links.active,
+  #nav-list-mascotas.active {
+    display: flex;
+  }
+
+  /* Estilo de los links dentro del menú móvil */
+  .nav-links a, 
+  #nav-list-mascotas a {
+    color: white;
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+  }
+
+  /* Ajuste de tarjetas en móvil */
+  .mascotas-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  /* Animación de Hamburguesa a X  */
+  #mobile-menu.is-active .bar:nth-child(2),
+  #mobile-menu-mascotas.is-active .bar:nth-child(2) { 
+    opacity: 0; 
+  }
+  
+  #mobile-menu.is-active .bar:nth-child(1),
+  #mobile-menu-mascotas.is-active .bar:nth-child(1) { 
+    transform: translateY(11px) rotate(45deg); 
+  }
+  
+  #mobile-menu.is-active .bar:nth-child(3),
+  #mobile-menu-mascotas.is-active .bar:nth-child(3) { 
+    transform: translateY(-11px) rotate(-45deg); 
+  }
+}
