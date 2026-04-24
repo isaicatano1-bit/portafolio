@@ -1,64 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mascotas</title>
-    <link rel="stylesheet" href="style.css">
-    <a href="index.html"></a>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mascotas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body id="body">
-    <header>
-    <nav class="navbar" id="menu">
-      <h1 class="logo" id="logo">Mascotas</h1> 
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html#about">Sobre mí</a></li>
-        <li><a href="index.html#skills">Skills</a></li>
-        <li><a href="index.html#projects">Proyectos</a></li>
-        <li><a href="index.html#contact">Contacto</a></li>
-      </ul>
-      
-    </header>        
-    <section class="seccion-mascotas">
-    <div class="contenedor-grid">
-        
-        <!-- Mascota 1 -->
-        <div class="tarjeta-wrap">
-            <input type="checkbox" id="toggle-1" class="trigger">
-            <label for="toggle-1" class="mascota-card">
-                <img src="molly.jpeg" alt="">
-                <div class="info">
-                    <h3>Molly</h3>
-                    <p>mona.</p>
-                </div>
-            </label>
-        </div>
+<body class="mascota_body">
 
-        <!-- Mascota 2 -->
-        <div class="tarjeta-wrap">
-            <input type="checkbox" id="toggle-2" class="trigger">
-            <label for="toggle-2" class="mascota-card">
-                <img src="blacky.jpeg" alt="">
-                <div class="info">
-                    <h3>Blacky</h3>
-                    <p>pintcher negro</p>
-                </div>
-            </label>
-        </div>
+<header class="navbar_mascota">
+  <h1>Mascotas 🐾</h1>
+  
 
-        <!-- Mascota 3 -->
-        <div class="tarjeta-wrap">
-            <input type="checkbox" id="toggle-3" class="trigger">
-            <label for="toggle-3" class="mascota-card">
-                <img src="byron.jpeg" alt="">
-                <div class="info">
-                    <h3>Byron</h3>
-                    <p>cabello negro con blanco</p>
-                </div>
-            </label>
-        </div>
+  <!-- 🔥 LINKS AL INDEX -->
+  <nav>
+    <a href="index.html#about">Sobre mí</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Proyectos</a>
+    <a href="index.html#contact">Contacto</a>
+  </nav>
+</header>
 
+<section class="mascotas-container">
+
+  <!-- Mascota 1 -->
+  <div class="card">
+    <img src="molly.jpeg" alt="Molly">
+    <div class="card-content">
+      <h2>Molly</h2>
+      <p>Es muy cariñosa y le encanta jugar todo el día.</p>
     </div>
+  </div>
+
+  <!-- Mascota 2 -->
+  <div class="card">
+    <img src="blacky.jpeg" alt="Blacky">
+    <div class="card-content">
+      <h2>Blacky</h2>
+      <p>Pinscher negro, rápido, protector y muy activo.</p>
+    </div>
+  </div>
+
+  <!-- Mascota 3 -->
+  <div class="card">
+    <img src="byron.jpeg" alt="Byron">
+    <div class="card-content">
+      <h2>Byron</h2>
+      <p>Tranquilo pero juguetón, le gusta descansar y correr.</p>
+    </div>
+  </div>
+
 </section>
+
 </body>
 </html>
